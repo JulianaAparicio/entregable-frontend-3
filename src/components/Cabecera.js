@@ -8,7 +8,7 @@ import React from 'react'
 //    h1
 //    p > span     (el span mostrará la cantidad recibida por props)
 
-export default function Cabecera() {
+const Cabecera = () => {
   
   return (
     <header>
@@ -16,3 +16,5 @@ export default function Cabecera() {
     </header>
   )
 }
+
+export default Cabecera;
