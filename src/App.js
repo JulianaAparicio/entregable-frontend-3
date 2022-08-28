@@ -7,14 +7,19 @@
 // PROPS: App deberá pasar por props lo necesario a sus componenetes internos.
 
 import { useState } from "react";
+import Cabecera from "./components/Cabecera";
+import Listado from "./components/Listado";
 
-function App() {
+function App({stock}) {
 
-  const [totalCounter, setTotalCounter] = useState(totalCounter)
+  const [totalCounter, setTotalCounter] = useState(0)
 
   const handleTotal = () => {
-    setTotalCounter(totalCounter + 1)
+    if (totalCounter < stock) {
+      setTotalCounter(totalCounter + 1)
+    }
   }
+  
 
   return (
     <div className="App">
