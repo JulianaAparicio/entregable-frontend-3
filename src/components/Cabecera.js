@@ -8,11 +8,12 @@ import React from 'react'
 //    h1
 //    p > span     (el span mostrará la cantidad recibida por props)
 
-const Cabecera = () => {
+const Cabecera = ({totalPurchase}) => {
   
   return (
     <header>
-        {/* maquetar Cabecera aquí */}
+        <h1>Carrito de compras</h1>
+        <p>Cantidad de productos <span>{totalPurchase}</span></p>        
     </header>
   )
 }

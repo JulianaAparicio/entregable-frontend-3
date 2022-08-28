@@ -6,12 +6,20 @@
 // Item.
 // PROPS: App deberá pasar por props lo necesario a sus componenetes internos.
 
+import { useState } from "react";
+
 function App() {
+
+  const [totalCounter, setTotalCounter] = useState(totalCounter)
+
+  const handleTotal = () => {
+    setTotalCounter(totalCounter + 1)
+  }
 
   return (
     <div className="App">
-      <Cabecera />
-      <Listado />
+      <Cabecera totalPurchase={handleTotal()} />
+      <Listado totalPurchase={handleTotal()} />
     </div>
   );
 }
