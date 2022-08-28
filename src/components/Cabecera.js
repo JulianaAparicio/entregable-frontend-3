@@ -6,14 +6,17 @@
 //    h1
 //    p > span     (el span mostrará la cantidad recibida por props)
 
+// App le tiene que pasar esa cantidad que tiene de estado a Cabecera (por props) así puede 
+// mostrarlo en el span
+
 import React from "react"
 
-const Cabecera = ({totalPurchase}) => {
+const Cabecera = ({totalCounter}) => {
   
   return (
     <header>
         <h1>Carrito de compras</h1>
-        <p>Cantidad de productos <span>{totalPurchase}</span></p>        
+        <p>Cantidad de productos <span>{totalCounter}</span></p>        
     </header>
   )
 }
