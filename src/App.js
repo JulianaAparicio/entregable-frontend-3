@@ -15,14 +15,15 @@ function App() {
 
   const [totalCounter, setTotalCounter] = useState(0)
 
-  const totalAmount = (counter) => {
-    setTotalCounter(totalCounter + counter)
+  const increaseItem = (count) => {
+    setTotalCounter(totalCounter + count);
   }
-
+  
+  
   return (
     <div className="App">
       <Cabecera total={totalCounter} />
-      <Listado functionAmount={totalAmount} />
+      <Listado functionAmount={increaseItem} />
     </div>
   );
 }
